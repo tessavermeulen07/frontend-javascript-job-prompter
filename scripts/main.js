@@ -112,11 +112,62 @@ console.log(departmentChoice);
 // -------------------- OPDRACHT 3 -------------------
 
 // ----- 3A -----
-const jobChoice = prompt('Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. 0: '
-    + departments.marketing.jobs[0].title + ', 1: '
-    + departments.marketing.jobs[1].title + ', 2: '
-    + departments.marketing.jobs[2].title + ', 3: '
-    + departments.marketing.jobs[3].title + '.');
+// const jobChoice = prompt('Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. 0: '
+//     + departments.marketing.jobs[0].title + ', 1: '
+//     + departments.marketing.jobs[1].title + ', 2: '
+//     + departments.marketing.jobs[2].title + ', 3: '
+//     + departments.marketing.jobs[3].title + '.');
+// console.log(jobChoice)
+
+// ----- 3B & 3C -----
+// switch (jobChoice) {
+//     case '0':
+//         console.log(departments.marketing.jobs[0].description);
+//         break;
+//     case '1':
+//         console.log(departments.marketing.jobs[1].description);
+//         break;
+//     case '2':
+//         console.log(departments.marketing.jobs[2].description);
+//         break;
+//     case '3':
+//         console.log(departments.marketing.jobs[3].description);
+//         break;
+//     default:
+//         console.log ('Ongeldige keuze');
+// }
+
+// -------------------- OPDRACHT 4 -------------------
+
+// ----- 4A -----
+        console.log(departmentChoice + ' is een leuke afdeling om te werken. Er werken op dit moment ' + departments[departmentChoice].numberOfEmployees + ' medewerkers.');
+
+// ----- 4B -----
+const jobChoice = prompt('Je koos '
++ departmentChoice
++'.'
++ ' Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. 0: '
+    + departments[departmentChoice].jobs[0].title + ', 1: '
+    + departments[departmentChoice].jobs[1].title + ', 2: '
+    + departments[departmentChoice].jobs[2].title + ', 3: '
+    + departments[departmentChoice].jobs[3].title + '.');
 console.log(jobChoice)
 
-// ----- 3B -----
+switch (jobChoice) {
+    case '0':
+        console.log(departments[departmentChoice].jobs[0].description);
+        break;
+    case '1':
+        console.log(departments[departmentChoice].jobs[1].description);
+        break;
+    case '2':
+        console.log(departments[departmentChoice].jobs[2].description);
+        break;
+    case '3':
+        console.log(departments[departmentChoice].jobs[3].description);
+        break;
+    default:
+        console.log ('Ongeldige keuze');
+}
+
+document.getElementById('role-title').textContent = 'banaan!';
