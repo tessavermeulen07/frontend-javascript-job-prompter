@@ -170,4 +170,6 @@ switch (jobChoice) {
         console.log ('Ongeldige keuze');
 }
 
-document.getElementById('role-title').textContent = 'banaan!';
+document.getElementById('role-title').textContent = 'Tessa';
+document.getElementById('department-description').textContent = 'Dansen';
+document.getElementById('role-description').textContent = 'haken';
